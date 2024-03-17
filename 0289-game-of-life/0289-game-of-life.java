@@ -2,9 +2,7 @@ class Solution {
     private int die = 2;
     private int live = 3;
     public void gameOfLife(int[][] board) {
-        // we only flip the 1 to die and 0 to live
-        // so when we find a die around, it must be a previous 1
-        // then we can count the 1s without being affected
+    
         int rows = board.length;
         int cols = board[0].length;
         for (int i=0;i<rows;i++){
