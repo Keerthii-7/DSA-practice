@@ -9,18 +9,12 @@ class Solution {
         int j = 0;  // Pointer for matching from the end (suffix)
         int m = smaller.length;
         int n = larger.length;
-        
-        // Match prefix
         while (i < m && smaller[i].equals(larger[i])) {
             i++;
         }
-        
-        // Match suffix
         while (j < m - i && smaller[m - 1 - j].equals(larger[n - 1 - j])) {
             j++;
         }
-        
-        // Check if the entire smaller sentence was matched as prefix or suffix
         return i + j == m;
     }
 }
